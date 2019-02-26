@@ -1,0 +1,78 @@
+\documentclass[12pt,twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{authblk}
+\graphicspath{ {images/} }
+
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=none
+]{biblatex}
+
+\addbibresource{SIPref.bib}
+
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
+%\fancyfoot{}
+%\fancyfoot[LE,RO]{\thepage}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+        \Huge
+        \textbf{Cavitation of Electron Bubbles In Liquid Helium-4}
+        
+        \vspace{0.5cm}
+        \LARGE
+        %Thesis Subtitle
+        
+        \vspace{1.5cm}
+        
+        \textbf{Kevin H. Bhimani}\footnote{Department of Physics, Kalamazoo College, Kalamazoo, MI}\\
+        Supervisor: Dr. Jan Tobochnik$^1$\\
+        In collaboration with: Dr. Humphrey Maris\footnote{Department of Physics, Brown University, Providence, RI} and Dr. Yiming Yang$^2$
+        \vfill
+        
+       Thesis submitted in partial fulfillment of the requirements for the degree of Bachelor of Arts.
+        \vspace{0.8cm}
+        
+        \includegraphics[height=0.2\textwidth]{Klogo.jpg}
+        
+        \Large
+        Kalamazoo, Michigan\\
+        September 2018
+        
+    \end{center}
+\end{titlepage}
+
+\chapter*{Abstract}
+Electron bubbles in liquid helium form an interesting quantum mechanical system. The electron bubbles can be cavitated by introducing a critical negative pressure in the form of sound waves. Experiments suggest that there are two such critical pressures: each one occurring with a different mechanism. We study the relationship of this critical pressure with variation in temperature, static pressure, and frequency of the sound. Experimental data also suggest the existence of a new event called a very rare event of which not much is known. Below a certain temperature, the value of the critical pressure deviated from theoretical predictions. We performed calculations for nonlinear propagation of sound to explain these deviations. The simulations successfully modeled the system and it was concluded that the propagation of sound in liquid helium is nonlinear.
+
+\chapter*{Acknowledgements}
+ This work is based on the research I did in the electron bubble group at Brown University during summer of 2017. I want to thank Dr. Humphrey Maris for having me work in his lab for the past two summers. I value deeply all the advice and assistance he has provided. I would also like to thank Dr. Yiming Yang for explaining to me the experiment in detail, always answering my questions, and providing plots from his thesis.
+
+I am grateful to Dr. Jan Tobochnik for being my undergraduate mentor and for providing feedback, support and advice during the entire project. Finally I would like to thank Jessica Wile for proof reading this thesis. This work was funded by Kalamazoo College's Center for Career and Professional Development and Sherman Fairchild Foundation.
+
+\tableofcontents
+
+\chapter{Introduction}
+\input{Introduction/intro.tex}
+
+\chapter{Nucleation Experiment}
+\input{Nucleation_Experiment/nucleation.tex}
+
+\chapter{Nonlinear correction}
+\input{Nonlinear_correction/nonlinear.tex}
+
+\chapter{Conclusion}
+\input{Conclusion/conclusion.tex}
+
+\printbibliography
+\end{document}
